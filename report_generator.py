@@ -26,6 +26,7 @@ The report is automatically stored inside the
 
 import datetime
 import os
+from pathlib import Path
 
 def save_report(student_name, report):
     """
@@ -41,8 +42,13 @@ def save_report(student_name, report):
     """
     # Check whether reports folder exists
     # If not present, create it
-    if not os.path.exists("reports"):
-        os.mkdir("reports")
+
+    # 1. Create the folder inside the project directory
+    project_dir = os.path.dirname(os.path.abspath(__file__))
+    reports_path = os.path.join(project_dir, "reports")
+
+    if not os.path.exists(reports_path):
+        os.mkdir(reports_path)
 
     # Generate current timestamp
     # Example:
@@ -55,15 +61,10 @@ def save_report(student_name, report):
     # to avoid filename issues
     safe_name = student_name.replace(" ", "_")
 
-    # Generate report filename
-    # SmartHire_AI_Agent added in filename
-    filename = (
-        f"reports/"
-        f"SmartHire_AI_Agent_"
-        f"{safe_name}_"
-        f"Interview_Report_"
-        f"{timestamp}.txt"
-    )
+     # 2. Build the full file path using reports_path
+    report_name = f"SmartHire_AI_Agent_{safe_name}_Interview_Report_{timestamp}.txt"
+    filename = os.path.join(reports_path, report_name)
+        
     # Open file in write mode
     with open(filename, "w", encoding="utf-8") as file:
         # Write branding header into report
