@@ -22,10 +22,10 @@ This module is reponsible for:
 =============================================================
 """ 
 
-# import ask_gork function
+# import ask_groq function
 # Used to communicate Llama3 model
 
-from llm_engine import ask_gork
+from llm_engine import ask_groq
 
 class MockInterviewAgent:
     """
@@ -111,7 +111,7 @@ class MockInterviewAgent:
         print("Sending Prompt to LLM...\n")
 
         # Send prompt to LLM
-        evaluation = ask_gork(prompt)
+        evaluation = ask_groq(prompt)
 
         print("LLM Evaluation Received Successfully.")
 
