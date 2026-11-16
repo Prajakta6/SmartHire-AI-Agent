@@ -1,0 +1,307 @@
+======================================================================
+         AI Mock Interview Agent
+         Generated Interview Report
+======================================================================
+
+Author : Prajakta Shinde
+Date : 14/11/2026
+======================================================================
+ STUDENT REPORT
+======================================================================
+
+
+            ============================================================
+            AI Mock Interview Report
+            ============================================================
+            Author : Prajakta Shinde
+            Date : 14th Nov 2026
+            Student Name : Prajakta H Shinde Pune
+            Total Questions Asked : 8
+            Total Score : 56
+            Average Score : 7.00/10
+            ============================================================
+            Overall Performance
+            ============================================================
+        Good performance.
+Student should add more examples and technical depth in answers.
+
+        ============================================================
+        Detailed Question-wise Analysis
+        ============================================================
+        
+            ------------------------------------------------------------
+            Question Number : 1
+            Topic : Python
+            Question :
+            Explain the difference between list, tuple and set in Python.
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            they are different data types in Python
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            4/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Score: 4 out of 10
+
+Evaluation:
+The answer is partially correct. The student is on the right track by mentioning that list, tuple, and set are different data types in Python. However, the answer lacks specific details about the key differences between these data types.
+
+Missing Points:
+The answer is missing specific details about the differences between list, tuple, and set, such as:
+
+* List is a mutable data type that can be modified after creation, whereas tuple is immutable.
+* Set is an unordered collection of unique elements, whereas list and tuple can contain duplicate elements.
+* List and tuple support indexing and slicing, whereas set does not.
+
+Improved Answer:
+Here's a better answer:
+
+"List, tuple, and set are three fundamental data types in Python. The main difference between them is their mutability and ordering. A list is a mutable data type that can be modified after creation, whereas a tuple is immutable. A set, on the other hand, is an unordered collection of unique elements. List and tuple support indexing and slicing, whereas set does not. For example, a list can be modified using indexing, such as my_list[0] = 'new_value', whereas a set cannot be modified in the same way. Similarly, a tuple can be sliced, such as my_tuple[1:3], whereas a set does not support slicing."
+
+Interview Suggestion:
+To improve interview performance, I suggest that the student be prepared to provide specific examples and explanations about the key differences between data types. For example, if the interviewer asks about the differences between list and tuple, the student should be able to explain the concepts of mutability and ordering, and provide examples of how these concepts apply in different scenarios.
+            
+            ------------------------------------------------------------
+            Question Number : 2
+            Topic : OOP
+            Question :
+            Explain the four pillars of Object Oriented Programming.
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            Abstraction, Polymorphism, Inheritance and Encapsulation
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            8/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Here is the evaluation:
+
+**Score: 8 out of 10**
+
+**Evaluation:** The answer is **correct**. The student has correctly identified the four pillars of Object Oriented Programming (OOP) as Abstraction, Polymorphism, Inheritance, and Encapsulation.
+
+**Missing Points:** The answer could have been more detailed and specific. For example, the student could have provided examples or explained what each pillar means in the context of OOP.
+
+**Improved Answer:**
+
+"The four pillars of Object Oriented Programming are Abstraction, Polymorphism, Inheritance, and Encapsulation. Abstraction allows us to focus on essential features while hiding unnecessary details. Polymorphism enables objects of different classes to be treated as objects of a common superclass, promoting flexibility and reusability. Inheritance allows one class to inherit properties and behavior from another class, enabling code reuse and hierarchical relationships. Encapsulation ensures that an object's internal state is hidden from the outside world, promoting data hiding and control.
+
+For instance, in a banking system, Abstraction can help hide the complexities of transaction processing, Polymorphism can allow different types of accounts (e.g., savings, current) to be treated as a single 'Account' type, Inheritance can enable a 'SavingsAccount' to inherit properties from a 'BasicAccount', and Encapsulation can ensure that account balances are safely stored and accessed only through authorized channels."
+
+**Interview Suggestion:** Practice explaining technical concepts in simple, student-friendly language. Use real-world examples or analogies to illustrate complex ideas, and avoid using overly technical jargon. This will help you communicate your ideas effectively and confidently during the interview.
+            
+            ------------------------------------------------------------
+            Question Number : 3
+            Topic : Machine Learning
+            Question :
+            What is the difference between supervised learning and unsupervised learning?
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            supervised learning uses labelled data and unsupervised learning has unlabelled data
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            6/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Here's my evaluation:
+
+**Score: 6 out of 10**
+
+**Evaluation:** Partially correct
+
+**Missing Points:**
+
+* The student's answer does not provide a clear understanding of the goals and objectives of supervised and unsupervised learning.
+* The answer does not highlight the key differences between the two types of learning.
+
+**Improved Answer:**
+
+"Supervised learning is a type of machine learning where we use labelled data to train a model. The goal is to learn the relationship between input features and output labels. For example, in image classification, we use labelled images to train a model to predict the class (e.g., dog, cat, etc.) of a new image. In contrast, unsupervised learning involves training a model on unlabelled data, with the goal of discovering hidden patterns or structures in the data. For instance, clustering algorithms in unsupervised learning group similar data points together without knowing the predefined labels. The key difference between the two is that supervised learning requires labelled data to learn a specific task, while unsupervised learning discovers underlying relationships in the data without prior knowledge of the labels."
+
+**Interview Suggestion:**
+
+* Encourage the student to provide concrete examples and clarify any technical terms used. For instance, you could ask the student to elaborate on what they mean by "labelled data" or "unlabelled data" to ensure they understand the concepts thoroughly.
+            
+            ------------------------------------------------------------
+            Question Number : 4
+            Topic : Deep Learning
+            Question :
+            What is the role of activation function in neural networks?
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            The primary purpose of an activation function in a neural network is to introduce non-linearity into the output of a neuron.
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            8/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Score: 8 out of 10
+
+Evaluation: Correct
+
+The student has correctly identified the primary purpose of an activation function in a neural network, which is to introduce non-linearity into the output of a neuron. This is a crucial concept in deep learning.
+
+Missing Points:
+
+* The student could have elaborated on why non-linearity is important in neural networks. For instance, they could have mentioned that without non-linearity, neural networks would be limited to linear separability, which is not sufficient for modeling complex relationships between inputs and outputs.
+
+Improved Answer:
+
+The primary purpose of an activation function in a neural network is to introduce non-linearity into the output of a neuron, which allows the network to learn complex relationships between inputs and outputs. This non-linearity enables the network to model more nuanced and abstract concepts, making it a critical component in deep learning.
+
+Interview Suggestion:
+
+To improve interview performance, students should practice providing clear and concise explanations, while also highlighting the key technical points. For instance, students could rephrase their answer to include specific examples or analogies that illustrate the importance of non-linearity in neural networks.
+            
+            ------------------------------------------------------------
+            Question Number : 5
+            Topic : Transformer
+            Question :
+            Explain self-attention mechanism in Transformer.
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            The self-attention mechanism is a core component of the Transformer architecture that allows every token (word or sub-word) in a sequence to evaluate and incorporate the context of all other tokens in the same sequence simultaneously.
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            7/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Score: 7 out of 10
+
+Evaluation:
+The answer is partially correct. The student correctly identifies the self-attention mechanism as a core component of the Transformer architecture and mentions that it allows tokens to evaluate context simultaneously. However, the answer lacks a clear explanation of the self-attention mechanism's working, such as the dot-product attention, weighted sum, and additive normalization.
+
+Missing Points:
+The answer does not explain the self-attention mechanism's mathematical formulation, specifically the dot-product attention, which is the core component of self-attention.
+
+Improved Answer:
+The self-attention mechanism in the Transformer architecture is a novel way to process sequential data. It allows each token in the input sequence to attend to every other token in the same sequence simultaneously. This is done by calculating a weighted sum of the tokens' embeddings, where the weights are learned during training and based on the tokens' similarities. The weighted sum is then added to the tokens' own embeddings to produce a new representation that takes into account the context of the entire sequence.
+
+Interview Suggestion:
+During the interview, it is essential to explain technical concepts in simple language, just like the improved answer above. Avoid using jargon and try to relate the concept to the student's everyday life or previous experiences.
+            
+            ------------------------------------------------------------
+            Question Number : 6
+            Topic : LLM
+            Question :
+            What is a Large Language Model?
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            A large language model (LLM) is a type of artificial intelligence system trained on massive amounts of text data to understand, summarize, translate, and generate human-like language. They form the backbone of modern AI chatbots and text tools.
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            7/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Here is the evaluation:
+
+**Score: 7 out of 10**
+
+**Evaluation:** Partially correct
+
+**Missing Points:** The answer does not mention the key characteristics of LLMs, such as transformer architecture, self-attention mechanism, and ability to learn and improve over time. Additionally, it does not provide specific examples of applications of LLMs.
+
+**Improved Answer:** A large language model (LLM) is a type of artificial intelligence system that uses a transformer architecture to analyze and generate human-like language. This is achieved through a self-attention mechanism, which allows the model to learn and improve over time. LLMs are trained on massive amounts of text data and can perform tasks such as language translation, text summarization, and generation. They form the backbone of modern AI chatbots and text tools, and have many applications in areas such as customer service, language learning, and content creation.
+
+**Interview Suggestion:** During the interview, try to provide specific examples of how LLMs are used in real-world applications. For instance, you could mention how LLMs are used in chatbots to provide customer service, or how they are used in language learning platforms to help users practice their language skills. This will show that you have a deep understanding of the topic and can apply it to real-world scenarios.
+            
+            ------------------------------------------------------------
+            Question Number : 7
+            Topic : RAG
+            Question :
+            Explain Retrieval Augmented Generation.
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            Retrieval-Augmented Generation (RAG) is an AI framework that improves the accuracy of a Large Language Model (LLM) by connecting it to external, up-to-date knowledge sources before it generates a response. Instead of relying solely on the static information memorized during its initial training, the model looks up relevant facts first and uses them to answer your question.
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            8/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Score: 8 out of 10
+
+Evaluation: Partially Correct
+
+The student has correctly identified Retrieval-Augmented Generation (RAG) as an AI framework that improves the accuracy of a Large Language Model (LLM). They also mentioned that RAG connects the model to external, up-to-date knowledge sources before it generates a response. However, the answer lacks some technical details and nuances.
+
+Missing Points:
+
+* The student did not elaborate on how RAG retrieves relevant facts from external knowledge sources. This is a crucial aspect of RAG.
+* The answer does not mention the specific techniques or architectures used in RAG to combine the retrieved information with the LLM's internal knowledge.
+
+Improved Answer:
+
+Retrieval-Augmented Generation (RAG) is an AI framework that enhances the performance of a Large Language Model (LLM) by leveraging external knowledge sources. Unlike traditional LLMs that rely solely on their initial training data, RAG models look up relevant facts from up-to-date databases and knowledge graphs before generating a response. This retrieval process is typically achieved through techniques like neural search or information retrieval algorithms. The retrieved information is then combined with the LLM's internal knowledge to produce a more accurate and informative response.
+
+Interview Suggestion:
+
+To improve interview performance, I suggest that the student focus on providing specific examples and technical details to support their answers. In this case, they could have elaborated on the specific techniques used in RAG, such as neural search or information retrieval algorithms, to demonstrate a deeper understanding of the topic.
+            
+            ------------------------------------------------------------
+            Question Number : 8
+            Topic : AI Agent
+            Question :
+            What is an AI Agent and how is it different from a chatbot?
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            An AI agent is an autonomous software system given a high-level goal that can reason, plan, and execute multi-step workflows across external tools and systems until the task is complete
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            8/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            Here is the evaluation of the student's answer:
+
+Score: 8 out of 10
+
+Evaluation: The answer is partially correct.
+
+Missing Points:
+
+* The student did not explicitly define what an AI agent is, instead, they described its characteristics. While this is a good start, a clear definition would be more comprehensive.
+* The student didn't specifically highlight the key differences between an AI agent and a chatbot. A brief comparison would strengthen the answer.
+
+Improved Answer:
+
+An AI agent is a type of artificial intelligence that can perform tasks independently, with the goal of achieving a specific objective. It's a software system that can reason, plan, and execute multi-step workflows to complete a task. Unlike a chatbot, an AI agent is designed to interact with external systems, tools, and tools to achieve a specific goal, whereas a chatbot is typically limited to processing user input and providing pre-defined responses. An AI agent can learn from its interactions and adapt its behavior to achieve its goals, whereas a chatbot is typically rule-based and does not learn.
+
+Interview Suggestion:
+
+For improvement, I would suggest that the student provide a clear definition of what an AI agent is, and then explicitly highlight the key differences between an AI agent and a chatbot. This would show a deeper understanding of the topic and help the student to effectively communicate their knowledge.
+            
+        ============================================================
+        Report Summary
+        ============================================================
+        Generated By : SmartHire_AI_Agent
+        ============================================================
+        
+
+======================================================================
+Generated By : SmartHire AI_Agent
+Creator : Prajakta Shinde
+======================================================================
