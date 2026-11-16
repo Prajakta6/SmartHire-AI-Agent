@@ -33,42 +33,40 @@ import requests
 import streamlit as st
 import os
 from dotenv import load_dotenv
+from pathlib import Path
+from groq import Groq
 
-import os
-import requests
-from dotenv import load_dotenv
+# Load .env from the project directory
+env_path = Path(__file__).resolve().parent / ".env"
+load_dotenv(dotenv_path=env_path, override=True)
 
-# Load environment variables once when the file starts
-load_dotenv()
+api_key = os.getenv("GROQ_API_KEY")
+
+if not api_key:
+    raise ValueError("GROQ_API_KEY not found in .env file")
+
+client = Groq(api_key=api_key)
 
 def ask_groq(prompt):
     """
     Sends a prompt to Groq's Llama 3.1 model and returns the generated response.
     """
-    api_key = os.getenv("GROQ_API_KEY")
-    if not api_key:
-        raise ValueError("GROQ_API_KEY not found. Check your .env file.")
+    try:
+        response = client.chat.completions.create(
+            model="openai/gpt-oss-120b",
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.7,
+            max_tokens=1024
+        )
 
-    url = "https://groq.com"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": "llama-3.1-8b-instant",
-        "messages": [{"role": "user", "content": prompt}]
-    }
+        return response.choices[0].message.content
 
-    response = requests.post(url, headers=headers, json=payload)
-    
-    # Raises an error immediately if the API returns a 401, 404, or 429 status
-    response.raise_for_status() 
-
-    data = response.json()
-    print("LLM Processing Completed Successfully!!")
-
-    # Extract the text from Groq's OpenAI-compatible response structure
-    return data["choices"][0]["message"]["content"]
+    except Exception as e:
+        print(f"Groq API Error: {e}")
+        #return "Unable to generate a response. Please try again."
+        raise
 
 def ask_llm(prompt):
     """
