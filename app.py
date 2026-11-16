@@ -4,13 +4,42 @@ import streamlit as st
 from interview_agent import MockInterviewAgent
 from questions import questions
 from report_generator import save_report
+from dotenv import load_dotenv
 
-def check_ollama_status() -> bool:
-    """Checks if the local Ollama server is running on port 11434."""
+load_dotenv()
+
+def check_groq_model_status() -> bool:
+    """Checks whether the GPT-OSS 120B model is available on Groq."""
+
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        print("Groq API key not found.")
+        return False
+
     try:
-        response = requests.get("http://localhost:11434/api/tags", timeout=2)
-        return response.status_code == 200
-    except requests.RequestException:
+        response = requests.get(
+            "https://api.groq.com/openai/v1/models",
+            headers={
+                "Authorization": f"Bearer {api_key}"
+            },
+            timeout=5
+        )
+
+        response.raise_for_status()
+
+        models = response.json().get("data", [])
+
+        for model in models:
+            if model.get("id") == "openai/gpt-oss-120b":
+                print("Groq GPT-OSS 120B model is available.")
+                return True
+
+        print("Groq GPT-OSS 120B model is not available.")
+        return False
+
+    except requests.RequestException as e:
+        print(f"Groq connection error: {e}")
         return False
 
 # ========================
@@ -47,10 +76,10 @@ with st.sidebar:
     st.header("⚙️ Interview Setup")
 
     # Ollama Server Health Check
-    if check_ollama_status():
-        st.success("🟢 Ollama Server: Connected (Llama 3)")
+    if check_groq_model_status():
+        st.success("🟢 Ready to use Groq!")
     else:
-        st.error("🔴 Ollama Server: Offline. Run `ollama serve` in terminal.")
+        st.error("🔴 Groq model unavailable!")
 
     student_name = st.text_input(
         "Student Name",
