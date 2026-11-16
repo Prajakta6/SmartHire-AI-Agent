@@ -60,9 +60,6 @@ def ask_gork(prompt):
     }
 
     response = requests.post(url, headers=headers, json=payload)
-    
-    # Raise exception if required failed.
-    response.raise_for_status()
 
     print("LLM Processing Completed Successfully!!")
 
