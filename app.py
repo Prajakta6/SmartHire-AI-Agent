@@ -77,7 +77,7 @@ with st.sidebar:
 
     # Ollama Server Health Check
     if check_groq_model_status():
-        st.success("🟢 Ready to use Groq!")
+        st.success("🟢 Ready to use Groq!\nGroq GPT-OSS 120B model is available.")
     else:
         st.error("🔴 Groq model unavailable!")
 
