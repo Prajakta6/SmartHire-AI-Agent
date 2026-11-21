@@ -74,7 +74,7 @@ def save_report(student_name, report):
         file.write("=" * 70 + "\n\n")
         
         file.write("Author : Prajakta Shinde\n")
-        file.write("Date : 14/11/2026\n")
+        file.write("Date : "+ timestamp+" \n")
         file.write("=" * 70 + "\n")
         file.write(" STUDENT REPORT\n")
         file.write("=" * 70 + "\n\n")

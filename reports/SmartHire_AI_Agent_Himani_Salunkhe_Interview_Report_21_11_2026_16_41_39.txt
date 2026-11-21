@@ -1,0 +1,88 @@
+======================================================================
+         AI Mock Interview Agent
+         Generated Interview Report
+======================================================================
+
+Author : Prajakta Shinde
+Date : 21_11_2026_16_41_39 
+======================================================================
+ STUDENT REPORT
+======================================================================
+
+
+            ============================================================
+            AI Mock Interview Report
+            ============================================================
+            Author : Prajakta Shinde
+            Date : 14th Nov 2026
+            Student Name : Himani Salunkhe
+            Total Questions Asked : 1
+            Total Score : 6
+            Average Score : 6.00/10
+            ============================================================
+            Overall Performance
+            ============================================================
+        Good performance.
+Student should add more examples and technical depth in answers.
+
+        ============================================================
+        Detailed Question-wise Analysis
+        ============================================================
+        
+            ------------------------------------------------------------
+            Question Number : 1
+            Topic : Python
+            Question :
+            Explain the difference between list, tuple and set in Python.
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            In Python, lists, tuples, and sets are built-in collection types that differ primarily in mutability (whether they can be changed), ordering, and duplicate handling.
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            6/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            **Score:** 6/10  
+
+**Evaluation:**  
+Partially correct. The answer identifies the three key distinctions—mutability, ordering, and duplicate handling—but it stops short of explaining each collection type in detail, providing examples, or mentioning other important characteristics such as indexing, hashability, and typical use‑cases.
+
+**Missing Points:**  
+1. **Lists** – mutable, ordered, allow duplicates, support indexing/slicing, typical methods (`append`, `extend`, `pop`, etc.).  
+2. **Tuples** – immutable, ordered, allow duplicates, support indexing/slicing, can be used as dictionary keys because they are hashable (provided they contain only hashable items).  
+3. **Sets** – mutable (but elements must be hashable), unordered, **do not** allow duplicates, provide fast membership testing and set operations (`union`, `intersection`, etc.).  
+4. Mention that sets are implemented as hash tables, so they have O(1) average lookup time, while lists have O(n).  
+5. Brief note on when to choose each (e.g., use a list for ordered collections that change, a tuple for fixed data or as keys, a set for unique items and fast membership tests).  
+
+**Improved Answer:**  
+In Python there are three common built‑in collection types:
+
+| Collection | Mutability | Order | Duplicates | Indexing | Typical Use |
+|------------|------------|-------|------------|----------|-------------|
+| **list**   | Mutable    | Preserves insertion order | Allowed | Yes (`mylist[0]`) | Ordered sequences that you need to modify (e.g., building a dynamic array). |
+| **tuple**  | Immutable  | Preserves insertion order | Allowed | Yes (`mytuple[0]`) | Fixed collections, records, or keys for dictionaries because they are hashable. |
+| **set**    | Mutable (elements must be hashable) | No guaranteed order | Not allowed (duplicates are automatically removed) | No (cannot use numeric index) | Storing unique items, fast membership tests, and performing mathematical set operations (`union`, `intersection`, etc.). |
+
+**Key differences**  
+- **Mutability:** Lists and sets can be changed after creation; tuples cannot.  
+- **Ordering:** Lists and tuples keep the order you insert items; sets are unordered, so iterating over a set may produce items in any order.  
+- **Duplicates:** Lists and tuples keep every element you add, even if it appears multiple times. Sets automatically discard duplicates, keeping only one copy of each distinct element.  
+- **Hashability:** Elements stored in a set must be hashable (e.g., numbers, strings, tuples of hashable items). Because tuples are immutable, they are hashable and can be used as set elements or dictionary keys, while lists cannot.  
+
+**Interview Suggestion:**  
+When answering conceptual questions, give a concise table or bullet list that covers the main attributes (mutability, order, duplicates, indexing) and add a short example or use‑case for each type. Practicing this structured format will help you convey complete information quickly and clearly.
+            
+        ============================================================
+        Report Summary
+        ============================================================
+        Generated By : SmartHire_AI_Agent
+        ============================================================
+        
+
+======================================================================
+Generated By : SmartHire AI_Agent
+Creator : Prajakta Shinde
+======================================================================

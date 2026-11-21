@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def check_groq_model_status() -> bool:
-    """Checks whether the GPT-OSS 120B model is available on Groq."""
+    """Checks whether Groq's openai/gpt-oss-120b model is available."""
 
     api_key = os.getenv("GROQ_API_KEY")
 
@@ -32,10 +32,10 @@ def check_groq_model_status() -> bool:
 
         for model in models:
             if model.get("id") == "openai/gpt-oss-120b":
-                print("Groq GPT-OSS 120B model is available.")
+                print("Groq's openai/gpt-oss-120b model is available.")
                 return True
 
-        print("Groq GPT-OSS 120B model is not available.")
+        print("Groq's openai/gpt-oss-120b model is not available.")
         return False
 
     except requests.RequestException as e:
@@ -47,7 +47,7 @@ def check_groq_model_status() -> bool:
 # ========================
 st.set_page_config(page_title="SmartHire AI Agent", page_icon="🤖", layout="centered")
 st.title("🤖 SmartHire AI Agent")
-st.caption("Local LLM-Powered Mock Technical Interview Assistant (Ollama • Llama 3)")
+st.caption("Groq's `openai/gpt-oss-120b`-powered mock technical interview assistant")
 
 # ========================
 # Session State Initialization
@@ -75,9 +75,9 @@ if "saved_report_content" not in st.session_state:
 with st.sidebar:
     st.header("⚙️ Interview Setup")
 
-    # Ollama Server Health Check
+    # Groq model availability check
     if check_groq_model_status():
-        st.success("🟢 Ready to use Groq!\nGroq GPT-OSS 120B model is available.")
+        st.success("🟢 Ready to use Groq!\nGroq's `openai/gpt-oss-120b` model is available.")
     else:
         st.error("🔴 Groq model unavailable!")
 
@@ -177,7 +177,7 @@ else:
                 st.markdown(user_answer)
 
             # Call MockInterviewAgent.evaluate_answer()
-            with st.spinner("Evaluating your answer with Llama 3..."):
+            with st.spinner("Evaluating your answer with Groq's `openai/gpt-oss-120b` model..."):
                 evaluation_text = agent.evaluate_answer(
                     topic=current_q_obj["topic"],
                     question=current_q_obj["question"],
