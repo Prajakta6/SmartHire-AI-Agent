@@ -55,6 +55,8 @@ SmartHire-AI-Agent/
 ├── report_generator.py
 ├── requirements.txt
 ├── README.md
+├── docs/
+│   └── screenshots/
 └── reports/
 ```
 
@@ -131,6 +133,38 @@ In the sidebar:
 6. Review the evaluation and continue.
 7. Download the final report from the completed interview view.
 
+## Screenshots
+
+### Application Home
+
+The setup sidebar confirms Groq model availability and lets the user enter a name and choose an interview mode.
+
+![SmartHire AI Agent home screen](docs/screenshots/01-app-home.png)
+
+### Topic-wise Interview Setup
+
+Topic-wise mode adds a topic selector and supports all topics in the question bank.
+
+![Topic-wise interview setup](docs/screenshots/02-topic-wise-setup.png)
+
+### Interview in Progress
+
+The app displays live progress, total score, average score, the current question, and the chat input.
+
+![Interview in progress](docs/screenshots/03-interview-started.png)
+
+### AI Answer Evaluation
+
+The Groq `openai/gpt-oss-120b` model provides a score, evaluation, missing points, improved answer, and interview suggestion.
+
+![AI answer evaluation](docs/screenshots/04-ai-evaluation.png)
+
+### Final Report and Download
+
+After the interview, the app provides a report preview and a text report download.
+
+![Final interview report](docs/screenshots/05-final-report.png)
+
 ## Running the Console App
 
 The text-only interface can be started with:
@@ -169,7 +203,7 @@ SmartHire_AI_Agent_<student_name>_Interview_Report_<dd_mm_yyyy_HH_MM_SS>.txt
 Example:
 
 ```text
-reports/SmartHire_AI_Agent_Prajakta_Shinde_Interview_Report_16_11_2026_22_12_19.txt
+reports/SmartHire_AI_Agent_Prajakta_Shinde_-PS_Interview_Report_21_11_2026_16_49_24.txt
 ```
 
 The Streamlit app also provides an in-page report preview and download button.
