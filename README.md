@@ -115,6 +115,8 @@ Do not commit `.env` or expose your API key.
 
 ## Running the Streamlit App
 
+**Live deployed app:** [https://smarthire-ai-agent-ps.streamlit.app/](https://smarthire-ai-agent-ps.streamlit.app/)
+
 Start the web interface from the project root:
 
 ```bash
