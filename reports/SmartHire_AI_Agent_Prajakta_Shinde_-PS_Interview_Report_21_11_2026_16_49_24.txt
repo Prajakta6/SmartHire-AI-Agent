@@ -1,0 +1,95 @@
+======================================================================
+         AI Mock Interview Agent
+         Generated Interview Report
+======================================================================
+
+Author : Prajakta Shinde
+Date : 21_11_2026_16_49_24 
+======================================================================
+ STUDENT REPORT
+======================================================================
+
+
+        ============================================================
+            AI Mock Interview Report
+        ============================================================
+            Author : Prajakta Shinde
+            Date : 21_11_2026
+            Student Name : Prajakta Shinde -PS
+            Total Questions Asked : 1
+            Total Score : 7
+            Average Score : 7.00/10
+        ============================================================
+            Overall Performance
+        ============================================================
+        Good performance.
+Student should add more examples and technical depth in answers.
+
+        ============================================================
+            Detailed Question-wise Analysis
+        ============================================================
+        
+            ------------------------------------------------------------
+                Question Number : 1
+                Topic : Python
+                Question :
+                Explain the difference between list, tuple and set in Python.
+            ------------------------------------------------------------
+                Student Answer:
+            ------------------------------------------------------------
+                In Python, lists are ordered and changeable, tuples are ordered and unchangeable, and sets are unordered collections of unique items
+            ------------------------------------------------------------
+                Extracted Score:
+            ------------------------------------------------------------
+                7/10
+            ------------------------------------------------------------
+                LLM Evaluation:
+            ------------------------------------------------------------
+                Score: 7/10  
+
+Evaluation:  
+Partially correct. The answer captures the primary distinctions—ordering and mutability—but omits several important aspects such as indexing, duplicate handling, supported operations, and typical use‑cases.
+
+Missing Points:  
+- Lists and tuples allow duplicate elements; sets automatically eliminate duplicates.  
+- Lists and tuples are indexed and support slicing; sets do not support indexing.  
+- Sets are mutable (you can add/remove elements) even though they are unordered, while tuples are immutable.  
+- Sets support mathematical set operations (union, intersection, difference, symmetric difference).  
+- Typical use‑cases: lists for ordered collections that change, tuples for fixed‑size records or as dictionary keys, sets for membership testing and eliminating duplicates.  
+- Performance notes: look‑ups are O(1) in sets, O(n) in lists/tuples; tuples use slightly less memory than lists.
+
+Improved Answer:  
+In Python there are three built‑in collection types that are often compared:
+
+* **List** – An ordered collection that can contain duplicate items.  
+  - Mutable: you can add, remove, or change elements (`append`, `pop`, assignment, etc.).  
+  - Supports indexing and slicing, so you can access `my_list[2]` or `my_list[1:4]`.  
+  - Good for sequences where order matters and the data may change.
+
+* **Tuple** – Also an ordered collection, but it is **immutable**.  
+  - Once created you cannot change, add, or delete its elements (no `append` or item assignment).  
+  - Because it is immutable, a tuple can be used as a dictionary key or stored in a set.  
+  - Like lists, it allows duplicate values and supports indexing and slicing.
+
+* **Set** – An unordered collection of **unique** items.  
+  - Mutable: you can add or remove elements (`add`, `remove`, `discard`).  
+  - No indexing or slicing because there is no defined order.  
+  - Automatically removes duplicates, making it ideal for membership testing and for performing mathematical set operations (`union`, `intersection`, `difference`, `symmetric_difference`).  
+  - Look‑ups are fast (average O(1) time).
+
+Choosing the right type depends on whether you need order, mutability, or uniqueness.
+
+Interview Suggestion:  
+When answering conceptual questions, briefly illustrate each type with a short code example (e.g., `my_list = [1,2,2]; my_tuple = (1,2,2); my_set = {1,2,2}`) and mention a practical use‑case. This shows deeper understanding and keeps the conversation engaging.
+            
+        ============================================================
+            Report Summary
+        ============================================================
+            Generated By : SmartHire_AI_Agent
+        ============================================================
+        
+
+======================================================================
+Generated By : SmartHire AI_Agent
+Creator : Prajakta Shinde
+======================================================================

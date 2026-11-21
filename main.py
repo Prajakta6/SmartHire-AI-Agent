@@ -88,7 +88,7 @@ def start_interview(agent, selected_questions):
         if answer.strip() == "":
             answer = "Student didn't give any answer"
 
-        print("\nEvaluating your answer using LLM...")
+        print("\nEvaluating your answer using Groq's openai/gpt-oss-120b model...")
         print("Please wait while your response is getting evaluated by AI Interview Agent")
 
         # Send Question and Answer to AI Agent for evaluation
@@ -113,7 +113,7 @@ def main():
      
     print_header()
     print("Welcome to SmartHire AI Mock Interview Agent")
-    print("This system conducts technical interviews using text input and LLM evalution.")
+    print("This system conducts technical interviews using Groq's openai/gpt-oss-120b model.")
     print("This project is designed for practical understanding of AI Agents.\n")
 
     # Accept Student name

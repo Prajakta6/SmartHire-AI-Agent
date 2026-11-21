@@ -1,0 +1,99 @@
+======================================================================
+         AI Mock Interview Agent
+         Generated Interview Report
+======================================================================
+
+Author : Prajakta Shinde
+Date : 14/11/2026
+======================================================================
+ STUDENT REPORT
+======================================================================
+
+
+            ============================================================
+            AI Mock Interview Report
+            ============================================================
+            Author : Prajakta Shinde
+            Date : 14th Nov 2026
+            Student Name : test
+            Total Questions Asked : 1
+            Total Score : 8
+            Average Score : 8.00/10
+            ============================================================
+            Overall Performance
+            ============================================================
+        Excellent performance.
+Student has strong technical clarity and communication skills.
+
+        ============================================================
+        Detailed Question-wise Analysis
+        ============================================================
+        
+            ------------------------------------------------------------
+            Question Number : 1
+            Topic : Python
+            Question :
+            Explain the difference between list, tuple and set in Python.
+            ------------------------------------------------------------
+            Student Answer:
+            ------------------------------------------------------------
+            Lists, tuples, and sets are Python collections that differ in mutability, ordering, and duplicate handling:
+• List ([]): Mutable, ordered, and allows duplicates. Use when you need a flexible sequence that can grow, shrink, or change.
+• Tuple (`()):** Immutable, ordered, and allows duplicates. Use for fixed data records that should never change.
+• Set ({}): Mutable, unordered, and disallows duplicates. Use for fast membership tests (in) and filtering unique items.
+            ------------------------------------------------------------
+            Extracted Score:
+            ------------------------------------------------------------
+            8/10
+            ------------------------------------------------------------
+            LLM Evaluation:
+            ------------------------------------------------------------
+            **Score:** 8/10  
+
+**Evaluation:**  
+Partially correct. The answer correctly identifies the key differences in mutability, ordering, and duplicate handling, and gives appropriate use‑cases. However, it omits several important technical details (e.g., hashability of tuples, set literal syntax, performance characteristics, and common set operations).
+
+**Missing Points:**  
+- Tuples are hashable (when all elements are hashable) and can be used as dictionary keys or elements of a set.  
+- The literal `{}` creates an empty **dictionary**, not a set; a set literal must contain at least one element, e.g., `{1, 2}` or be created with `set()`.  
+- Membership testing in a set is O(1) on average, while in a list/tuple it is O(n).  
+- Sets support mathematical operations such as union, intersection, difference, and symmetric difference.  
+- Lists and tuples preserve insertion order and support indexing/slicing; sets do not support indexing.  
+- Memory and performance: tuples use slightly less memory than lists because they are immutable.  
+
+**Improved Answer:**  
+> In Python there are three built‑in collection types that are often compared: **list**, **tuple**, and **set**.  
+> 
+> 1. **List (`[]`)** – *mutable, ordered, allows duplicates*  
+>    - You can add, remove, or change items with methods like `append`, `pop`, or assignment (`mylist[0] = 5`).  
+>    - Elements keep the order you insert them, so you can access any item by its index (`mylist[2]`).  
+>    - Because duplicates are allowed, `[1, 2, 2]` is a valid list.  
+>    - Membership test (`x in mylist`) scans the list, taking O(n) time.  
+> 
+> 2. **Tuple (`()`)** – *immutable, ordered, allows duplicates*  
+>    - Once created, its contents cannot be changed; no `append` or item assignment.  
+>    - Like lists, tuples keep the insertion order and support indexing and slicing (`mytuple[1]`).  
+>    - Because they never change, tuples are hashable (if all elements are hashable) and can be used as dictionary keys or set elements.  
+>    - Useful for fixed collections of related items (e.g., coordinates) or for returning multiple values from a function.  
+> 
+> 3. **Set (`{}` with at least one element, or `set()`)** – *mutable, unordered, no duplicates*  
+>    - Stores each value only once; adding an existing element has no effect.  
+>    - Does not preserve order and does not support indexing (`myset[0]` raises an error).  
+>    - Membership testing (`x in myset`) is O(1) on average, making sets ideal for fast look‑ups and deduplication.  
+>    - Provides set algebra operations: `union (|)`, `intersection (&)`, `difference (-)`, and `symmetric_difference (^)`.  
+>    - Empty curly braces `{}` create an empty **dictionary**; to create an empty set you must use `set()`.  
+
+**Interview Suggestion:**  
+When answering conceptual questions, back up each bullet point with a concrete example or a short code snippet. Demonstrating a tiny piece of code (e.g., `myset = {1, 2, 2}` → `{1, 2}`) shows you not only know the theory but also can apply it, which makes your answer stand out.
+            
+        ============================================================
+        Report Summary
+        ============================================================
+        Generated By : SmartHire_AI_Agent
+        ============================================================
+        
+
+======================================================================
+Generated By : SmartHire AI_Agent
+Creator : Prajakta Shinde
+======================================================================

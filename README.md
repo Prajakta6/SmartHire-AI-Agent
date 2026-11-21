@@ -1,89 +1,145 @@
 # SmartHire AI Agent
 
-SmartHire AI Agent is a text-based mock interview assistant that evaluates candidate answers using a local LLM through Ollama. It simulates technical interviews, scores responses, and generates a final interview report saved under the `reports/` folder.
+SmartHire AI Agent is an AI-powered mock technical interview application built with Python. It presents interview questions through a Streamlit chat interface, evaluates candidate answers with Groq's `openai/gpt-oss-120b` model, calculates interview scores, and saves a detailed text report.
 
-This project is designed to demonstrate practical AI agent workflows such as prompt engineering, LLM integration, answer evaluation, interview automation, and report generation.
+The project demonstrates prompt engineering, LLM integration, answer evaluation, interview automation, interview history, and report generation.
 
 ## Features
 
-- Full mock interview mode
+- Streamlit-based interactive interview UI
+- Full interview mode
 - Topic-wise interview mode
-- Question bank for technical topics
-- LLM-based answer evaluation using local Ollama
-- Score extraction and average performance calculation
-- Interview history tracking
-- Final report generation as a `.txt` file
+- Live interview progress and score metrics
+- Structured answer evaluation with:
+  - Score out of 10
+  - Evaluation
+  - Missing points
+  - Improved answer
+  - Interview suggestion
+- Final performance summary
+- Question-wise interview report
+- Downloadable and locally saved `.txt` reports
+- Console-based interview interface through `main.py`
+
+## Available Topics
+
+The question bank in `questions.py` includes:
+
+- Python
+- Object-Oriented Programming (OOP)
+- Machine Learning
+- Deep Learning
+- Transformer
+- Large Language Models (LLM)
+- Retrieval-Augmented Generation (RAG)
+- AI Agents
 
 ## Tech Stack
 
 - Python
-- Ollama
-- Llama 3 model
-- `requests` for API communication
-- Text-based console interface
+- Streamlit
+- Groq API
+- `openai/gpt-oss-120b`
+- `groq` and `requests` Python packages
+- `python-dotenv`
 
 ## Project Structure
 
 ```text
-SmartHire_AI_Agent/
-├── README.md
+SmartHire-AI-Agent/
+├── app.py
 ├── main.py
 ├── interview_agent.py
 ├── llm_engine.py
 ├── questions.py
 ├── report_generator.py
 ├── requirements.txt
+├── README.md
 └── reports/
 ```
 
 ## File Overview
 
-- `main.py` - Application entry point and interview menu
-- `questions.py` - Question bank with topic-wise interview questions
-- `llm_engine.py` - Connects to Ollama and sends prompts to the LLM
-- `interview_agent.py` - Handles evaluation, scoring, and final report generation
-- `report_generator.py` - Saves the final interview report to `reports/`
-- `reports/` - Output folder for generated interview reports
+- `app.py` - Streamlit web application and chat interface
+- `main.py` - Console-based application entry point
+- `interview_agent.py` - Evaluates answers, maintains history, calculates scores, and creates reports
+- `llm_engine.py` - Loads the Groq API key and communicates with the Groq model
+- `questions.py` - Interview questions and topic definitions
+- `report_generator.py` - Saves generated reports in the `reports/` directory
+- `reports/` - Generated interview report files
 
 ## Prerequisites
 
-Before running the project, make sure you have:
+- Python 3.10 or newer
+- A Groq account and API key
+- Internet access for Groq API requests
 
-- Python 3.8 or newer
-- [Ollama](https://ollama.com) installed
-- A working local LLM model available, such as `llama3`
+## Setup
 
-## Setup and Installation
+1. Clone or download the repository:
 
-1. Clone or download the project folder.
-2. Open a terminal in the project directory.
-3. Install Python dependencies:
+```bash
+git clone https://github.com/Prajakta6/SmartHire-AI-Agent.git
+cd SmartHire-AI-Agent
+```
+
+2. Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+On Windows:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Pull the Llama 3 model if it is not already installed:
+4. Create a `.env` file in the project root:
 
-```bash
-ollama pull llama3
+```text
+GROQ_API_KEY=your_groq_api_key
 ```
 
-5. Start the Ollama server:
+Do not commit `.env` or expose your API key.
+
+## Running the Streamlit App
+
+Start the web interface from the project root:
 
 ```bash
-ollama serve
+streamlit run app.py
 ```
 
-## Running the Application
+Open the local URL shown by Streamlit, usually `http://localhost:8501`.
 
-From the project root, run:
+In the sidebar:
+
+1. Enter your name.
+2. Select full or topic-wise interview mode.
+3. If using topic-wise mode, choose a topic.
+4. Click **Start Interview**.
+5. Answer each question in the chat input.
+6. Review the evaluation and continue.
+7. Download the final report from the completed interview view.
+
+## Running the Console App
+
+The text-only interface can be started with:
 
 ```bash
 python main.py
 ```
 
-You will see a menu like this:
+The console menu provides:
 
 ```text
 Select Interview Mode
@@ -94,44 +150,61 @@ Select Interview Mode
 
 ## How It Works
 
-1. The user enters their name.
-2. The app presents either all interview questions or questions from one chosen topic.
-3. For each question, the user types an answer.
-4. The answer is sent to the LLM for evaluation.
-5. The model returns a score, strengths, missing points, improved answer, and suggestions.
-6. The application tracks scores across the entire interview.
-7. A final interview report is generated and saved in `reports/`.
+1. The application creates a `MockInterviewAgent` for the candidate.
+2. It builds a prompt containing the topic, question, candidate name, and answer.
+3. `llm_engine.py` sends the prompt to Groq's `openai/gpt-oss-120b` model.
+4. The agent extracts a numerical score from the response.
+5. The score and complete answer history are stored in memory.
+6. The application calculates the total and average score.
+7. `report_generator.py` saves the final report as a timestamped `.txt` file.
 
-## Example Workflow
+## Report Output
 
-```text
-Enter Student name: Prajakta
-
-Select Interview Mode
-1. Start Full Interview
-2. Start Topic-wise Interview
-3. Exit
-```
-
-After answering questions, the program prints the evaluation and saves a report file such as:
+Reports are saved automatically in the `reports/` directory. The filename format is:
 
 ```text
-reports/SmartHire_AI_Agent_Prajakta_Interview_Report_16_11_2026_22_12_19.txt
+SmartHire_AI_Agent_<student_name>_Interview_Report_<dd_mm_yyyy_HH_MM_SS>.txt
 ```
+
+Example:
+
+```text
+reports/SmartHire_AI_Agent_Prajakta_Shinde_Interview_Report_16_11_2026_22_12_19.txt
+```
+
+The Streamlit app also provides an in-page report preview and download button.
 
 ## Troubleshooting
 
-If the app shows a connection error, check the following:
+### Groq API key not found
 
-- Ollama is installed and running
-- The `llama3` model is downloaded
-- Port `11434` is available
-- The command `ollama serve` is active before running the app
+- Confirm that `.env` exists in the project root.
+- Confirm it contains `GROQ_API_KEY=...`.
+- Restart Streamlit or the console process after changing `.env`.
 
-## Notes
+### Groq model unavailable
 
-This project is intended for learning and demonstration. It uses a local model rather than a cloud API, which makes it suitable for offline experimentation and educational use.
+- Check your Groq API key and account access.
+- Confirm that `openai/gpt-oss-120b` is available to your Groq account.
+- Verify your internet connection.
+
+### Missing Python package
+
+Run:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Report not found
+
+- Confirm write permissions for the project directory.
+- The application creates the `reports/` directory automatically if it does not exist.
+
+## Author
+
+Prajakta Shinde
 
 ## License
 
-This project is provided for educational purposes and can be modified or extended as needed.
+This project is provided for educational and demonstration purposes.
